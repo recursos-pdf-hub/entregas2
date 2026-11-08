@@ -1,0 +1,1012 @@
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>:root{
+  --bg:#F7F6F2;
+  --bg-alt:#EFEDE7;
+  --surface:#FFFFFF;
+  --text:#202525;
+  --muted:#5D6664;
+  --primary:#183D46;
+  --primary-soft:#2B565F;
+  --secondary:#7E988A;
+  --sand:#C2AE95;
+  --border:rgba(32,37,37,.14);
+  --border-soft:rgba(32,37,37,.08);
+  --shadow:0 1px 2px rgba(24,61,70,.04), 0 8px 28px rgba(24,61,70,.06);
+  --shadow-lift:0 2px 6px rgba(24,61,70,.06), 0 18px 44px rgba(24,61,70,.10);
+  --serif:"Noto Kufi Arabic", "Segoe UI", Tahoma, sans-serif;
+  --sans:"IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --wrap:1220px;
+  --radius:12px;
+  --radius-lg:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html:focus-within{scroll-behavior:smooth}body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}:where(.ps-root) img,:where(.ps-root) video{max-width:100%;height:auto;display:block}:where(.ps-root) a{color:inherit;text-decoration:none}:where(.ps-root) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}:where(.ps-root) ul{margin:0;padding:0;list-style:none}:where(.ps-root) h1,:where(.ps-root) h2,:where(.ps-root) h3,:where(.ps-root) h4{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;line-height:1.14;margin:0}:where(.ps-root) h1{font-size:clamp(2.5rem,5.4vw,4.1rem)}:where(.ps-root) h2{font-size:clamp(1.95rem,3.5vw,3rem)}:where(.ps-root) h3{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.22}:where(.ps-root) h4{font-size:1.15rem;line-height:1.3}:where(.ps-root) p{margin:0 0 1.1em}:where(.ps-root) p:last-child{margin-bottom:0}:where(.ps-root) :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}.ps-wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 28px}.ps-wrap-narrow{max-width:820px;margin:0 auto}.ps-section{padding:clamp(56px,6vw,92px) 0}.ps-section--alt{background:var(--bg-alt)}.ps-section--tight{padding-top:clamp(52px,6vw,80px)}.ps-eyebrow{
+  font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--secondary);margin:0 0 20px;display:block;
+}.ps-eyebrow--light{color:rgba(247,246,242,.62)}.ps-lead{font-size:clamp(1.06rem,1.5vw,1.22rem);color:var(--muted);max-width:62ch}.ps-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--primary);color:#F7F6F2;
+  font-size:1rem;font-weight:600;letter-spacing:.01em;
+  padding:17px 34px;border-radius:8px;
+  transition:background .25s var(--ease), transform .25s var(--ease);
+}.ps-btn:hover{background:var(--primary-soft);transform:translateY(-1px)}.ps-btn--lg{padding:21px 44px;font-size:1.06rem}.ps-microcopy{font-size:.85rem;color:var(--muted);margin-top:16px}.js .ps-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease), transform .7s var(--ease)}.ps-reveal.ps-is-visible{opacity:1;transform:none}.ps-hero{padding:clamp(48px,6vw,72px) 0 clamp(48px,5vw,72px)}.ps-hero__grid{display:flex;flex-direction:column;align-items:center;text-align:center}.ps-hero h1{margin:0 0 22px}.ps-hero__head{order:1;max-width:940px}.ps-hero__figure{order:3;position:relative;width:100%;margin:clamp(44px,5vw,64px) 0 0}.ps-hero__sub{font-family:var(--sans);font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:400;line-height:1.5;color:var(--muted);margin:0 auto;max-width:52ch}.ps-hero__figure img{width:100%;border-radius:0;box-shadow:none}.ps-gallery__item{margin:0}.ps-anatomy{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(28px,3.5vw,52px);align-items:center;margin-top:40px}.ps-anatomy__figure{position:sticky;top:100px;margin:0}.ps-anatomy__figure img{width:100%;border:0;border-radius:0;box-shadow:none;background:none}.ps-steps{counter-reset:none}.ps-steps{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}.ps-steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--border-soft)}.ps-steps li:nth-child(1),.ps-steps li:nth-child(2){padding-top:0}.ps-steps li:nth-child(5),.ps-steps li:nth-child(6){border-bottom:0}.ps-steps__num{font-family:var(--serif);font-size:1.4rem;color:var(--secondary);line-height:1.1}.ps-steps h3{font-size:1.02rem;font-family:var(--sans);font-weight:600;letter-spacing:0;margin-bottom:3px}.ps-steps p{font-size:.92rem;line-height:1.5;color:var(--muted);margin:0}@media (max-width:680px){.ps-steps{grid-template-columns:1fr}.ps-steps li:nth-child(2){padding-top:16px}.ps-steps li:nth-child(5){border-bottom:1px solid var(--border-soft)}}.ps-kinds{display:block;margin-top:44px}.ps-kind{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:clamp(30px,4vw,64px);align-items:center;
+  background:none;border:0;border-radius:0;padding:clamp(34px,4vw,52px) 0;
+  border-bottom:1px solid var(--border-soft);
+}.ps-kind:last-child{border-bottom:0;padding-bottom:0}.ps-kind:first-child{padding-top:0}.ps-kind:nth-child(even) .ps-kind__media{order:2}.ps-kind__media{background:none;border:0;padding:0;min-height:0;display:block}.ps-kind__media img{width:100%;max-height:none;height:auto;box-shadow:none;border-radius:0}.ps-kind__body{padding:0;display:flex;flex-direction:column;gap:12px}.ps-kind__count{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}.ps-kind h3{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.15rem);font-weight:400;letter-spacing:-.01em}.ps-kind p{font-size:1.02rem;line-height:1.55;margin:0}.ps-kind__list{margin-top:2px}.ps-kind__list li{
+  position:relative;padding:8px 28px 8px 0;font-size:1rem;line-height:1.45;color:var(--text);
+}.ps-kind__list li::before{
+  content:"";position:absolute;inset-inline-start:2px;top:14px;width:11px;height:6px;
+  border-left:2px solid var(--clay);border-bottom:2px solid var(--clay);
+  transform:rotate(-45deg);
+}@media (max-width:820px){.ps-kind{grid-template-columns:1fr;gap:22px;padding:32px 0}.ps-kind:nth-child(even) .ps-kind__media{order:0}}.ps-summary-list{margin-top:46px;border-top:1px solid var(--border)}.ps-acc{border-bottom:1px solid var(--border)}.ps-summary-list h3,.ps-faq h3{font-family:var(--sans);font-weight:400;margin:0}.ps-acc__trigger{
+  width:100%;display:flex;align-items:center;gap:18px;
+  padding:20px 4px;text-align:start;font-family:var(--sans);
+  transition:color .2s var(--ease);
+}.ps-acc__trigger:hover{color:var(--primary)}.ps-acc__index{font-family:var(--sans);font-size:.92rem;font-weight:600;letter-spacing:.06em;color:var(--secondary);min-width:30px}.ps-acc__title{
+  flex:1;font-family:var(--sans) !important;font-size:1.04rem;font-weight:500;
+  letter-spacing:0;text-transform:none;line-height:1.35;color:var(--text);
+}.ps-acc__badge{font-size:.78rem;letter-spacing:.02em;text-transform:none;color:var(--muted);white-space:nowrap}.ps-acc__arrow{width:14px;height:14px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s var(--ease);flex:none}.ps-acc__trigger[aria-expanded="true"] .ps-acc__arrow{transform:rotate(225deg) translate(-3px,-3px)}.ps-acc__panel{overflow:hidden;height:0;transition:height .35s var(--ease)}.ps-acc__inner{padding:2px 4px 30px}.ps-acc__inner p{font-size:.98rem;color:var(--muted)}.ps-maps{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 40px}.ps-maps li{display:flex;gap:14px;padding:9px 0;font-size:.97rem;border-bottom:1px solid var(--border-soft)}.ps-maps li b{font-weight:400;color:var(--secondary);min-width:32px;font-variant-numeric:tabular-nums}.ps-smart{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(38px,5vw,68px);align-items:center;margin-top:48px}.ps-smart__figure{margin:0}.ps-smart__figure img{width:100%;border:1px solid var(--border-soft);border-radius:var(--radius);box-shadow:var(--shadow-lift);background:#fff}.ps-refs{display:flex;flex-wrap:wrap;gap:10px 12px;background:none;border:0;margin-top:26px}.ps-refs li{background:none;padding:0;display:flex;align-items:baseline;gap:8px;
+  border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:.9rem}.ps-refs__name{font-family:var(--sans);font-size:.9rem;font-weight:500;line-height:1.3;margin:0;color:var(--text)}.ps-refs__line{font-size:.82rem;color:var(--muted);margin:0}.ps-disclaimer{font-size:.82rem;color:var(--muted);border-inline-start:2px solid var(--border);padding-inline-start:18px;margin-top:26px;max-width:70ch}.ps-stack{margin-top:40px;border-top:0;display:flex;flex-direction:column;gap:18px}.ps-stack__item{
+  display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,3vw,44px);align-items:center;
+  padding:26px 30px;border:1.5px solid var(--clay);border-radius:var(--radius-lg);
+  background:var(--surface);
+}.ps-stack__item img{width:100%;border-radius:12px;box-shadow:none}.ps-stack__item h3{margin-bottom:8px;font-size:1.4rem}.ps-stack__item p{color:var(--muted);max-width:52ch;margin:0}@media (max-width:900px){.ps-stack__item{grid-template-columns:1fr;gap:18px;padding:22px 22px 26px}}.ps-stack__item--bonus{border-color:var(--deep);position:relative}.ps-stack__label--bonus{
+  display:inline-block;background:var(--deep);color:#F4EDE4;
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  padding:5px 12px;border-radius:999px;margin-bottom:10px;
+}.ps-stack__item--noimg{grid-template-columns:1fr}.ps-offer{background:var(--primary);color:#F7F6F2}.ps-offer h2{color:#fff}.ps-offer__list{margin:30px 0 36px}.ps-offer__list li{position:relative;padding-inline-start:28px;padding-block:9px;font-size:1rem;color:rgba(247,246,242,.9);border-bottom:1px solid rgba(247,246,242,.14)}.ps-offer__list li::before{content:"";position:absolute;inset-inline-start:2px;top:19px;width:9px;height:5px;border-left:1.5px solid var(--green-line);border-bottom:1.5px solid var(--green-line);transform:rotate(-45deg)}.ps-price__now{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);line-height:1.05;color:#fff;margin:6px 0 4px}.ps-offer .ps-microcopy{color:rgba(247,246,242,.62)}.ps-offer .ps-btn{width:100%;max-width:460px}.ps-guarantee{display:grid;grid-template-columns:220px 1fr;gap:clamp(30px,5vw,64px);align-items:center}.ps-faq{margin-top:44px;border-top:1px solid var(--border);max-width:900px}.ps-faq .ps-acc__trigger{gap:24px}.ps-faq .ps-acc__title{font-family:var(--sans) !important;font-size:1.05rem;font-weight:500;letter-spacing:0}.ps-final{position:relative;overflow:hidden;background:var(--bg-alt)}.ps-final__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,72px);align-items:center}.ps-final__figure img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lift)}.ps-final__verbs{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.7;color:var(--primary);margin:26px 0 36px}@media (max-width:1080px){.ps-refs{grid-template-columns:repeat(2,1fr)}}@media (max-width:900px){body{font-size:16px}.ps-anatomy,.ps-smart,.ps-final__grid,.ps-guarantee{grid-template-columns:1fr}.ps-hero__figure{order:2;margin-top:34px}.ps-anatomy__figure{position:static}.ps-anatomy{gap:26px}.ps-stack__item{grid-template-columns:1fr;gap:22px}.ps-kinds{grid-template-columns:repeat(2,1fr)}.ps-maps{grid-template-columns:1fr}}@media (max-width:680px){.ps-wrap{padding:0 20px}.ps-section{padding:52px 0}:where(.ps-root) h1{font-size:2.35rem}:where(.ps-root) h2{font-size:1.85rem}.ps-kinds{grid-template-columns:1fr}.ps-refs{grid-template-columns:1fr}.ps-btn{width:100%}}@media (prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{animation-duration:.001ms !important;transition-duration:.001ms !important}.ps-reveal{opacity:1;transform:none}}:root{
+  --bg:#F8F1E8;            
+  --bg-alt:#F1E7DA;        
+  --surface:#FFFFFF;
+  --text:#22312F;
+  --muted:#5F6E6B;
+  --deep:#1B4B4E;          
+  --clay:#8A5A3C;          
+  --accent:#E08B5E;        
+  --accent-soft:#F2C4A6;
+  --primary:#1B4B4E;
+  --primary-soft:#26666A;
+  --secondary:#B98B63;
+  --border:rgba(34,49,47,.14);
+  --border-soft:rgba(34,49,47,.08);
+  --radius:18px;
+  --radius-lg:26px;
+  --shadow:0 2px 4px rgba(27,75,78,.05), 0 12px 32px rgba(27,75,78,.07);
+  --shadow-lift:0 4px 10px rgba(27,75,78,.07), 0 24px 56px rgba(27,75,78,.12);
+}.ps-section--deep{background:var(--deep);color:#F4EDE4}.ps-section--deep h2,.ps-section--deep h3{color:#FFFFFF}.ps-section--deep .ps-lead,.ps-section--deep p{color:rgba(244,237,228,.78)}.ps-section--deep .ps-eyebrow{color:var(--accent-soft)}.ps-section--deep,.ps-final,.ps-offer{
+  border-top-left-radius:50% 46px;
+  border-top-right-radius:50% 46px;
+  margin-top:-46px;
+  position:relative;
+  z-index:1;
+}.ps-hero + .ps-section--deep{z-index:2}.ps-kind,.ps-gallery__item,.ps-smart__figure img,.ps-stack__item img,.ps-hero__figure img{
+  border-radius:var(--radius);
+}.ps-anatomy__figure img{border-radius:0 !important;box-shadow:none !important;border:0 !important}.ps-hero__figure img,.ps-final__figure img{border-radius:var(--radius-lg)}.ps-section--deep .ps-kind{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.16);
+}.ps-section--deep .ps-kind__media{background:rgba(255,255,255,.05);border-bottom-color:rgba(255,255,255,.14)}.ps-section--deep .ps-kind h3{color:#fff}.ps-section--deep .ps-kind p{color:rgba(244,237,228,.76)}.ps-btn{
+  background:var(--accent);color:#2A1A10;border-radius:999px;
+  padding:18px 38px;font-weight:600;
+  box-shadow:0 6px 18px rgba(224,139,94,.28);
+}.ps-btn:hover{background:#EC9A6D;transform:translateY(-1px)}.ps-btn--lg{padding:22px 48px}.ps-kind__count{letter-spacing:.14em}.ps-hero{padding-bottom:0}.ps-hero__grid{padding-inline-start:0;padding-inline-end:0}.ps-hero__head{padding-inline-start:28px;padding-inline-end:28px}.ps-hero__figure{
+  width:100vw;
+  max-width:none;
+  margin-inline-start:calc(50% - 50vw);
+  margin-inline-end:calc(50% - 50vw);
+  margin-bottom:0;
+}.ps-hero__figure img{
+  width:100vw;
+  max-width:none;
+  height:auto;
+  display:block;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}@media (max-width:680px){.ps-hero__head{padding-inline-start:20px;padding-inline-end:20px}}.ps-offer{background:#1F5C3A}.ps-final{background:var(--clay);color:#FAF3EC}.ps-final h2{color:#fff}.ps-final__verbs{color:var(--accent-soft)}.ps-final .ps-microcopy{color:rgba(250,243,236,.7)}@media (max-width:680px){.ps-section--deep,.ps-final,.ps-offer,.ps-section--deep + .ps-section,.ps-offer + .ps-section,.ps-final + .ps-section{
+    border-top-left-radius:50% 26px;border-top-right-radius:50% 26px;margin-top:-26px;
+  }}.ps-allin{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 44px;margin-top:34px}.ps-allin li{
+  position:relative;padding:9px 30px 9px 0;font-size:1.02rem;color:#F4EDE4;line-height:1.45;
+}.ps-allin li::before{
+  content:"";position:absolute;inset-inline-start:2px;top:15px;width:11px;height:6px;
+  border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:rotate(-45deg);
+}.ps-allin li b{font-weight:600;color:#fff}.ps-compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}.ps-compare__col{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius);padding:30px 28px 32px}.ps-compare__col--after{background:var(--deep);border-color:var(--deep);color:#F4EDE4}.ps-compare__col h3{font-size:1.25rem;margin-bottom:20px}.ps-compare__col--after h3{color:#fff}.ps-compare__col li{position:relative;padding-inline-start:26px;padding-block:9px;font-size:.98rem;color:var(--muted);border-bottom:1px solid var(--border-soft)}.ps-compare__col--after li{color:rgba(244,237,228,.86);border-bottom-color:rgba(255,255,255,.14)}.ps-compare__col li:last-child{border-bottom:0}.ps-compare__col li::before{content:"";position:absolute;inset-inline-start:2px;top:18px;width:10px;height:2px;background:var(--clay);opacity:.6}.ps-compare__col--after li::before{
+  content:"";width:9px;height:5px;background:none;top:16px;
+  border-left:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);
+  transform:rotate(-45deg);opacity:1;
+}@media (max-width:900px){.ps-allin,.ps-compare{grid-template-columns:1fr}}.ps-marquee{position:relative;margin-top:44px;overflow:hidden;
+  margin-inline-start:calc(50% - 50vw);margin-inline-end:calc(50% - 50vw);
+  width:100vw;max-width:100vw;
+}.ps-marquee .ps-gallery{
+  display:flex !important;width:max-content !important;gap:0 !important;
+  margin:0 !important;padding:4px 0 8px !important;overflow:visible !important;
+  will-change:transform;
+}.ps-marquee .ps-gallery__group{display:flex;gap:26px;padding-inline-end:26px;flex:none}.ps-marquee .ps-gallery__item{
+  flex:0 0 360px !important;cursor:pointer;
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface);
+}.ps-marquee .ps-gallery__item img{width:100%;aspect-ratio:1/1.414;object-fit:cover;display:block}@media (max-width:900px){.ps-marquee .ps-gallery__item{flex:0 0 300px !important}}@media (max-width:680px){.ps-marquee .ps-gallery__group{gap:18px;padding-inline-end:18px}.ps-marquee .ps-gallery__item{flex:0 0 260px !important}}:root{--green:#4E9E58;--green-soft:#63B26D;--green-line:#7CC486}.ps-btn{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(78,158,88,.28)}.ps-btn:hover{background:var(--green-soft)}.ps-pricebox{
+  background:#fff;border:3px solid var(--green-line);border-radius:26px;
+  padding:clamp(30px,4vw,46px) clamp(24px,3vw,44px);text-align:center;
+  max-width:640px;margin:0 auto;
+}.ps-pricebox .ps-price__from{
+  font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;color:var(--text);margin:0 0 12px;
+}.ps-pricebox .ps-price__from s{color:var(--text);text-decoration-color:#D8452F;text-decoration-thickness:3px}.ps-pricebox .ps-price__now{
+  font-family:var(--sans);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,6vw,3.9rem);line-height:1.05;color:var(--green);margin:0 0 10px;
+}.ps-pricebox .ps-price__cash{
+  font-size:clamp(1.05rem,2vw,1.4rem);font-weight:700;color:var(--text);
+  text-transform:uppercase;letter-spacing:.01em;margin:0 0 26px;
+}.ps-pricebox .ps-btn{width:100%;font-size:1.02rem;line-height:1.35;padding:20px 26px;text-transform:uppercase}.ps-pricebox .ps-microcopy{color:var(--muted);margin-top:16px}.ps-offer__list--center{max-width:640px;margin:0 auto 34px}.ps-cta-solo{text-align:center;padding-top:8px}.ps-cta-solo .ps-btn{max-width:520px;width:100%}.ps-guarantee{grid-template-columns:180px 1fr;align-items:center}.ps-guarantee figure img{
+  width:100%;max-width:180px;height:auto;margin:0;
+}@media (max-width:900px){.ps-guarantee{grid-template-columns:1fr;gap:24px;text-align:center;justify-items:center}.ps-guarantee figure img{max-width:120px}.ps-guarantee .ps-lead{margin-inline-start:auto;margin-inline-end:auto}}.ps-topbar{
+  background:#C0392B;color:#fff;text-align:center;
+  padding:11px 20px;font-size:.92rem;font-weight:600;
+  letter-spacing:.01em;line-height:1.35;
+}.ps-topbar b{font-weight:800}@media (max-width:520px){.ps-topbar{font-size:.84rem;padding:10px 16px}}.ps-tdf-acesso{
+    --tdf-teal:#23403D;
+    --tdf-teal-lt:#3A5E5A;
+    --tdf-cream:#F3EDE2;
+    --tdf-coral:#D95D39;
+    --tdf-rule:#D8CFBF;
+    --tdf-muted:#7A7068;
+    font-family:'IBM Plex Sans Arabic',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    max-width:760px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--tdf-rule);
+    border-top:3px solid var(--tdf-coral);
+    border-radius:10px;
+    padding:28px 26px 24px;
+    box-shadow:0 8px 28px rgba(35,64,61,.07);
+    box-sizing:border-box;
+  }.ps-tdf-acesso *{box-sizing:border-box}.ps-tdf-acesso-head{text-align:center;margin-bottom:22px}.ps-tdf-acesso-badge{
+    display:inline-block;
+    background:var(--tdf-teal);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:7px 18px;
+    border-radius:40px;
+    margin-bottom:12px;
+  }.ps-tdf-acesso-sub{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:17px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+    margin:0;
+  }.ps-tdf-acesso-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }.ps-tdf-acesso-item{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+    background:var(--tdf-cream);
+    border:1px solid var(--tdf-rule);
+    border-radius:8px;
+    padding:16px 16px 17px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }.ps-tdf-acesso-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(35,64,61,.12);
+  }.ps-tdf-acesso-ico{
+    width:36px;height:36px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:var(--tdf-teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;
+    line-height:1;
+  }.ps-tdf-acesso-item strong{
+    display:block;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--tdf-teal);
+    margin-bottom:4px;
+    line-height:1.3;
+  }.ps-tdf-acesso-item span{
+    display:block;
+    font-size:12.5px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+  }@media (max-width:720px){.ps-tdf-acesso{padding:24px 18px 20px;border-radius:8px}.ps-tdf-acesso-grid{grid-template-columns:1fr;gap:10px}.ps-tdf-acesso-sub{font-size:15.5px}.ps-tdf-acesso-item{padding:14px}}@media (prefers-reduced-motion:reduce){.ps-tdf-acesso-item{transition:none}.ps-tdf-acesso-item:hover{transform:none}}
+html{scroll-behavior:smooth;background:#fff}
+.ps-root{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#ps-oferta{scroll-margin-top:24px}
+.js .ps-reveal.ps-is-visible{opacity:1;transform:none}
+.ps-root .ps-hero__cta .ps-btn{max-width:100%}
+@media(max-width:520px){.ps-root img{max-width:100%;height:auto}.ps-root .ps-btn--lg{width:100%;text-align:center}}
+@media(max-width:380px){.ps-root .ps-btn{font-size:.95rem;padding-inline-start:14px;padding-inline-end:14px}}
+
+[dir=rtl] .ps-rtl-flip{transform:scaleX(-1)}
+body,.ps-rtl{line-height:1.75}
+</style>
+<script>try{document.documentElement.classList.add('js')}catch(e){}</script>
+<div dir="rtl" lang="ar" class="ps-rtl"><div class="ps-root">
+<div class="ps-topbar">وصول مدى الحياة + <b>خصم {{savings}}</b> لفترة محدودة</div>
+<main>
+
+<section class="ps-hero" id="ps-hero">
+<div class="ps-wrap ps-hero__grid">
+<div class="ps-hero__head">
+<span class="ps-eyebrow">مكتبة مرئية مرجعية للجلسات العلاجية</span>
+<h1>خرائط ذهنية علاجية</h1>
+<p class="ps-hero__sub">أطلس مرئي يضم أكثر من 250 خريطة لفهم المشاعر والأنماط والسلوكيات والعلاقات بطريقة واضحة ومنظّمة وسهلة الرجوع إليها.</p>
+<div class="ps-hero__cta" style="margin-top:26px"><a class="ps-btn ps-btn--lg" href="#ps-oferta">أريد الوصول الآن ↓</a></div></div>
+<figure class="ps-hero__figure">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" fetchpriority="high" height="900" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mockup-principal-es.jpg" width="1200"/>
+</figure>
+</div>
+</section>
+
+<div class="ps-tdf-acesso">
+<div class="ps-tdf-acesso-head">
+<span class="ps-tdf-acesso-badge">وصول مدى الحياة</span>
+<p class="ps-tdf-acesso-sub">تشتريه مرة واحدة. والمادة ملكك إلى الأبد.</p>
+</div>
+<div class="ps-tdf-acesso-grid">
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">∞</div>
+<div>
+<strong>وصول مدى الحياة</strong>
+<span>بلا اشتراك شهري، بلا تجديد، بلا تاريخ انتهاء.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">🖨</div>
+<div>
+<strong>PDF جاهز للطباعة</strong>
+<span>ملفات عالية الدقة. اطبعها كلما احتجت إليها.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">↺</div>
+<div>
+<strong>راجعه متى شئت</strong>
+<span>من الجوال أو الكمبيوتر أو مطبوعًا. في أي وقت.</span>
+</div>
+</div>
+</div>
+</div>
+
+<section class="ps-section ps-section--deep" id="ps-inclui">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>اطّلع على كل ما يتضمنه:</h2>
+</div>
+<ul class="ps-allin ps-reveal">
+<li><b>120</b> خريطة ذهنية للمشاعر (240 صفحة)</li>
+<li><b>32</b> استعارة مرئية</li>
+<li><b>12</b> لوحة مقارنة</li>
+<li><b>12</b> مخطط لسير الجلسة</li>
+<li><b>12</b> خريطة للمناهج العلاجية <b>(هدية)</b></li>
+<li><b>6</b> مقاييس مرئية <b>(هدية)</b></li>
+<li>وثائق نفسية قابلة للتعديل <b>(هدية)</b></li>
+<li>تحديثات دورية دون أي تكلفة إضافية <b>(هدية)</b></li>
+<li>فهرس البحث وفهرس حسب المواقف</li>
+<li>مراجع علمية كاملة</li>
+<li>PDF عالي الدقة، رقمي أو مطبوع</li>
+<li>وصول فوري وضمان 7 أيام</li>
+</ul>
+</div>
+</section>
+
+<section class="ps-section" id="ps-conteudo">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>اطّلع على الأطلس من الداخل:</h2>
+</div>
+
+<div class="ps-marquee ps-reveal" id="ps-marquee">
+<div class="ps-gallery" id="ps-gallery" role="list">
+<figure class="ps-gallery__item" role="listitem">
+<img alt="خريطة ذهنية علاجية: الاجترار الذهني" decoding="async" height="1137" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/pagina-rumiacion-1.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="خريطة ذهنية علاجية: الاحتراق الوظيفي" decoding="async" height="1253" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/pagina-agotamiento.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="خريطة ذهنية علاجية: تخريب الذات" decoding="async" height="1273" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/pagina-autosabotaje.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="خريطة ذهنية علاجية: متلازمة المحتال" decoding="async" height="1258" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/pagina-impostor.jpg" width="800"/>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-formatos">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>اطّلع على المادة بالتفصيل:</h2>
+</div>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mock-mapas-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">240 صفحة</span>
+<h3>خرائط ذهنية للمشاعر </h3>
+<ul class="ps-kind__list">
+<li>افهم كل شعور، بكلمات بسيطة</li>
+<li>تعرّف كيف يظهر في الجسد والأفكار والسلوك</li>
+<li>لاحظ الدائرة التي تجعل النمط يتكرر</li>
+</ul>
+</div>
+</article>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/anatomias-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">32 قطعة</span>
+<h3>استعارة مرئية</h3>
+<ul class="ps-kind__list">
+<li>استعارات تشرح النمط بنظرة واحدة</li>
+<li>المجالات الستة التي يظهر فيها هذا النمط عادةً</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mock-tabela-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12 قطعة</span>
+<h3>لوحة مقارنة</h3>
+<ul class="ps-kind__list">
+<li>قارن بين الحالات المتشابهة جنبًا إلى جنب</li>
+<li>أنماط التعلّق الأربعة وأنماط التواصل والاستجابات للضغط</li>
+<li>دائمًا بالمعايير نفسها، سطرًا بسطر</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="300" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mock-regua-es.jpg" width="424"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">6 قطع</span>
+<h3>مقاييس مرئية</h3>
+<ul class="ps-kind__list">
+<li>اكتشف أين تقف الآن</li>
+<li>نافذة التحمّل، شدة المشاعر، الحزم</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mock-desicao-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12 قطعة</span>
+<h3>مخطط لسير الجلسة</h3>
+<ul class="ps-kind__list">
+<li>ابدأ من هنا عندما لا تعرف أي خريطة تبحث عنها</li>
+<li>تبدأ مما تشعر به، لا من اسم المشكلة</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</div></section>
+
+<section class="ps-section" id="ps-como-funciona">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>انظر كيف نُظّمت كل خريطة:</h2>
+</div>
+<div class="ps-anatomy">
+<figure class="ps-anatomy__figure ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mapa-detalhado-es.jpg" width="900"/>
+</figure>
+<ol class="ps-steps ps-reveal">
+<li><span class="ps-steps__num">01</span><div><h3>افهم</h3><p>المفهوم الأساسي، مشروحًا بوضوح.</p></div></li>
+<li><span class="ps-steps__num">02</span><div><h3>تعرّف</h3><p>إشارات في الجسد والأفكار والسلوك.</p></div></li>
+<li><span class="ps-steps__num">03</span><div><h3>لاحظ الدائرة</h3><p>ما الذي يثيره، وما الذي يزيده حدة، وما الذي يُبقيه.</p></div></li>
+<li><span class="ps-steps__num">04</span><div><h3>استكشف</h3><p>أسئلة لتعميق التأمل.</p></div></li>
+<li><span class="ps-steps__num">05</span><div><h3>تعمّق</h3><p>الاحتياجات والمعتقدات المرتبطة بالموضوع.</p></div></li>
+<li><span class="ps-steps__num">06</span><div><h3>الخطوات التالية</h3><p>مسارات لمواصلة الاستكشاف.</p></div></li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section" id="ps-sumario" style="background:var(--surface)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>اطّلع على جميع المواضيع قبل الوصول</h2>
+</div>
+<div class="ps-summary-list" data-accordion="">
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-01" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-01">
+<span class="ps-acc__index">01</span>
+<span class="ps-acc__title">القلق والخوف والانشغال</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-01" class="ps-acc__panel" id="ps-sum-01" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>1</b>دائرة القلق</li><li><b>2</b>الانشغال المفرط</li><li><b>3</b>الاجترار الذهني</li><li><b>4</b>عدم تحمّل الغموض</li><li><b>5</b>فرط اليقظة</li><li><b>6</b>التجنّب بسبب القلق</li><li><b>7</b>الخوف من الخطأ</li><li><b>8</b>الخوف من الفشل</li><li><b>9</b>الخوف من أحكام الآخرين</li><li><b>10</b>الحاجة إلى السيطرة</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-02" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-02">
+<span class="ps-acc__index">02</span>
+<span class="ps-acc__title">المشاعر وتنظيمها</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-02" class="ps-acc__panel" id="ps-sum-02" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>11</b>الغضب</li><li><b>12</b>الشعور بالذنب</li><li><b>13</b>الخجل</li><li><b>14</b>الحزن</li><li><b>15</b>الإحباط</li><li><b>16</b>الضغينة</li><li><b>17</b>الحسد</li><li><b>18</b>الوحدة</li><li><b>19</b>الإرهاق العاطفي</li><li><b>20</b>صعوبة التعرّف على المشاعر والتعبير عنها</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-03" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-03">
+<span class="ps-acc__index">03</span>
+<span class="ps-acc__title">تقدير الذات والهوية</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-03" class="ps-acc__panel" id="ps-sum-03" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>21</b>الناقد الداخلي</li><li><b>22</b>المقارنة المستمرة</li><li><b>23</b>متلازمة المحتال</li><li><b>24</b>الحاجة إلى القبول</li><li><b>25</b>تدني تقدير الذات</li><li><b>26</b>صورة الذات</li><li><b>27</b>الكمالية</li><li><b>28</b>القيمة الذاتية</li><li><b>29</b>الأصالة مقابل التكيّف</li><li><b>30</b>التعاطف مع الذات</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-04" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-04">
+<span class="ps-acc__index">04</span>
+<span class="ps-acc__title">العلاقات والروابط</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-04" class="ps-acc__panel" id="ps-sum-04" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>31</b>أنماط التعلّق</li><li><b>32</b>الاعتماد العاطفي</li><li><b>33</b>الاعتمادية المتبادلة</li><li><b>34</b>الخوف من الهجر</li><li><b>35</b>الحساسية للرفض</li><li><b>36</b>الغيرة وانعدام الأمان</li><li><b>37</b>صعوبة الثقة</li><li><b>38</b>أنماط متكررة في العلاقات العاطفية</li><li><b>39</b>عدم التوفر العاطفي</li><li><b>40</b>الخوف من القرب العاطفي</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-05" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-05">
+<span class="ps-acc__index">05</span>
+<span class="ps-acc__title">الأسرة وتاريخ النشأة</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-05" class="ps-acc__panel" id="ps-sum-05" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>41</b>الأدوار الأسرية</li><li><b>42</b>تحمّل دور الوالدين (الوالدية المعكوسة)</li><li><b>43</b>التثليث الأسري</li><li><b>44</b>الإهمال العاطفي</li><li><b>45</b>توقعات الأسرة</li><li><b>46</b>الشعور بالذنب عند التمايز عن الأسرة</li><li><b>47</b>العلاقة مع صورة الأم</li><li><b>48</b>العلاقة مع صورة الأب</li><li><b>49</b>الخلافات بين الإخوة</li><li><b>50</b>الأنماط المتوارثة بين الأجيال</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-06" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-06">
+<span class="ps-acc__index">06</span>
+<span class="ps-acc__title">الضغط النفسي والصدمة والأمان</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-06" class="ps-acc__panel" id="ps-sum-06" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>51</b>استجابة المواجهة</li><li><b>52</b>استجابة الهروب</li><li><b>53</b>استجابة التجمّد</li><li><b>54</b>استجابة الإرضاء</li><li><b>55</b>المحفزات العاطفية</li><li><b>56</b>نافذة التحمّل</li><li><b>57</b>فرط الاستثارة</li><li><b>58</b>الانفصال ونقص الاستثارة</li><li><b>59</b>الشعور بالأمان</li><li><b>60</b>الاستقرار والتعافي بعد التجارب الصعبة</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-07" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-07">
+<span class="ps-acc__index">07</span>
+<span class="ps-acc__title">تخريب الذات والأنماط السلوكية</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-07" class="ps-acc__panel" id="ps-sum-07" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>61</b>التسويف</li><li><b>62</b>تخريب الذات</li><li><b>63</b>التردد</li><li><b>64</b>تجنّب المهام الصعبة</li><li><b>65</b>البحث المفرط عن اليقين</li><li><b>66</b>الاندفاعية</li><li><b>67</b>دائرة العادات</li><li><b>68</b>الحاجة إلى إرضاء الآخرين</li><li><b>69</b>القسوة في مطالبة الذات</li><li><b>70</b>دائرة الارتياح الفوري</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-08" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-08">
+<span class="ps-acc__index">08</span>
+<span class="ps-acc__title">الحدود والتواصل</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-08" class="ps-acc__panel" id="ps-sum-08" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>71</b>الحدود الشخصية</li><li><b>72</b>صعوبة قول «لا»</li><li><b>73</b>الشعور بالذنب عند وضع الحدود</li><li><b>74</b>التواصل الحازم</li><li><b>75</b>التواصل السلبي</li><li><b>76</b>التواصل العدواني</li><li><b>77</b>التواصل السلبي العدواني</li><li><b>78</b>المحادثات الصعبة</li><li><b>79</b>التعبير عن الاحتياجات</li><li><b>80</b>الإصلاح بعد الخلاف</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-09" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-09">
+<span class="ps-acc__index">09</span>
+<span class="ps-acc__title">الحزن والفقد والتغيّرات</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-09" class="ps-acc__panel" id="ps-sum-09" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>81</b>فهم الحزن على الفقد</li><li><b>82</b>الحزن الاستباقي</li><li><b>83</b>الفقد الغامض</li><li><b>84</b>انتهاء علاقة</li><li><b>85</b>فقدان شخص عزيز</li><li><b>86</b>فقدان العمل</li><li><b>87</b>تغيير المدينة أو البيئة</li><li><b>88</b>التحولات الحياتية</li><li><b>89</b>محفزات الحزن على الفقد</li><li><b>90</b>إعادة بناء المعنى بعد الفقد</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-10" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-10">
+<span class="ps-acc__index">10</span>
+<span class="ps-acc__title">الجسد وصورة الذات والقرب العاطفي</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-10" class="ps-acc__panel" id="ps-sum-10" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>91</b>صورة الجسد</li><li><b>92</b>الخجل من الجسد</li><li><b>93</b>المقارنة الجسدية</li><li><b>94</b>العلاقة مع الجسد</li><li><b>95</b>الضغط النفسي والأحاسيس الجسدية</li><li><b>96</b>التعرّف على إشارات الجسد</li><li><b>97</b>التوتر وحالة التأهب</li><li><b>98</b>القرب العاطفي والهشاشة</li><li><b>99</b>الخجل في القرب العاطفي</li><li><b>100</b>الصلة بين الجسد–المشاعر</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-11" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-11">
+<span class="ps-acc__index">11</span>
+<span class="ps-acc__title">العمل والمال والغاية</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-11" class="ps-acc__panel" id="ps-sum-11" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>101</b>الاحتراق الوظيفي</li><li><b>102</b>الشعور بالذنب عند الراحة</li><li><b>103</b>الإفراط في العمل</li><li><b>104</b>الحدود في العمل</li><li><b>105</b>متلازمة المحتال المهنية</li><li><b>106</b>الخوف من تقاضي الأجر</li><li><b>107</b>المعتقدات حول المال</li><li><b>108</b>القلق المالي</li><li><b>109</b>التحول المهني</li><li><b>110</b>الغاية والقيم المهنية</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-12" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-12">
+<span class="ps-acc__index">12</span>
+<span class="ps-acc__title">معرفة الذات والموارد الداخلية</span>
+<span class="ps-acc__badge">10 خرائط</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-12" class="ps-acc__panel" id="ps-sum-12" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>111</b>الاحتياجات العاطفية</li><li><b>112</b>القيم الشخصية</li><li><b>113</b>الفكرة ← الشعور ← السلوك</li><li><b>114</b>تحديد المحفزات</li><li><b>115</b>شبكة الدعم</li><li><b>116</b>استراتيجيات التكيّف</li><li><b>117</b>الموارد الداخلية</li><li><b>118</b>الأهداف العلاجية</li><li><b>119</b>إدراك التقدّم</li><li><b>120</b>خطة شخصية للاستمرارية</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--deep">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>استخدم الفهرس للتنقل في المادة بطريقة بسيطة وواضحة.</h2>
+</div>
+<div class="ps-smart">
+<figure class="ps-smart__figure ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/indice-es.jpg" width="900"/>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">الفرق على أرض الواقع</span>
+<h2>الموضوع نفسه، مع الأطلس وبدونه</h2>
+</div>
+<div class="ps-compare">
+<div class="ps-compare__col ps-reveal">
+<h3>كيف يظهر عادةً</h3>
+<ul>
+<li>المفهوم موزّع على ثلاثة كتب مختلفة.</li>
+<li>تشرح الموضوع نفسه من الصفر في كل مرة.</li>
+<li>ترسمه على ورقة في اللحظة نفسها، ثم يضيع الرسم.</li>
+<li>يغادر المراجع الجلسة وينسى نصف ما قيل.</li>
+<li>لا يبقى شيء مرئي يمكنك أن تتركه له.</li>
+<li>إعداد موادك بنفسك يستهلك منك ساعات كل أسبوع.</li>
+</ul>
+</div>
+<div class="ps-compare__col ps-compare__col--after ps-reveal">
+<h3>مع الأطلس</h3>
+<ul>
+<li>تجد الموضوع في ثوانٍ، عبر الفهرس.</li>
+<li>البنية نفسها في جميع الخرائط.</li>
+<li>الصفحة جاهزة بالفعل، للعرض أو الطباعة.</li>
+<li>يأخذ المراجع الخريطة معه ويعود إليها لاحقًا.</li>
+<li>أسئلة التأمل موجودة بالفعل في المادة.</li>
+<li>لا شيء لتُعدّه: تفتحه وتستخدمه.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--tight ps-section--alt" id="ps-referencias" style="padding-bottom:clamp(40px,4vw,56px)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow" style="margin-bottom:12px">البحث والمراجع</span>
+<p class="ps-lead" style="max-width:70ch">تستند عملية الإعداد إلى مفاهيم من مدارس مختلفة في علم النفس.</p>
+</div>
+<ul class="ps-refs ps-reveal">
+<li><p class="ps-refs__name">آرون وجوديث بيك</p><p class="ps-refs__line">العلاج المعرفي السلوكي (CBT)</p></li>
+<li><p class="ps-refs__name">جيفري إي. يونغ</p><p class="ps-refs__line">العلاج بالمخططات</p></li>
+<li><p class="ps-refs__name">مارشا إم. لينهان</p><p class="ps-refs__line">DBT</p></li>
+<li><p class="ps-refs__name">ستيفن سي. هايز</p><p class="ps-refs__line">ACT</p></li>
+<li><p class="ps-refs__name">جون بولبي</p><p class="ps-refs__line">نظرية التعلّق</p></li>
+<li><p class="ps-refs__name">بول غيلبرت</p><p class="ps-refs__line">التعاطف</p></li>
+<li><p class="ps-refs__name">جيمس غروس</p><p class="ps-refs__line">تنظيم المشاعر</p></li>
+<li><p class="ps-refs__name">ليزلي غرينبرغ</p><p class="ps-refs__line">المركّز على المشاعر</p></li>
+</ul>
+<p class="ps-disclaimer ps-reveal" style="margin-top:20px;font-size:.78rem">ذكر المؤلفين والأعمال هو إشارة مرجعية أو إلهام مفاهيمي، ولا يعني مشاركة المؤلفين أو مراجعتهم أو تعاونهم أو تأييدهم لـ«الأطلس العلاجي المرئي».</p>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">وصولك</span>
+<h2>كل ما ستحصل عليه</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mockup-mapas-es.jpg" width="600"/>
+<div>
+<h3>120 خريطة ذهنية للمشاعر</h3>
+<p>240 صفحة في 12 محورًا موضوعيًا.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/anatomias-mock-es.jpg" width="600"/>
+<div>
+<h3>32 استعارة مرئية</h3>
+<p>كيف يعمل النمط من الداخل، بنظرة واحدة.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mockup-regua-es.jpg" width="600"/>
+<div>
+<h3>12 لوحة مقارنة</h3>
+<p>حالات من الموضوع نفسه، مقارنةً جنبًا إلى جنب.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/fluxogramas-es.jpg" width="600"/>
+<div>
+<h3>12 مخططًا لسير الجلسة</h3>
+<p>واحد لكل محور. من الموقف إلى الخريطة المناسبة.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/indice-es.jpg" width="600"/>
+<div>
+<h3>فهرس البحث والمراجع العلمية</h3>
+<p>اعثر على أي موضوع وراجع المصادر.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">إلى جانب المادة الأساسية</span>
+<h2>الهدايا المشمولة مع الوصول</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mapas-abordagens-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">هدية 01</span>
+<h3>12 خريطة لأهم المناهج العلاجية</h3>
+<p>العلاج المعرفي السلوكي (CBT)، والتحليل النفسي، والغشطالت، وACT، وDBT، والعلاج بالمخططات، والعلاج النظمي، والإنساني، واليونغي، وEMDR، والتجربة الجسدية (Somatic Experiencing)، وتحليل التفاعلات، مقارنةً بالمعايير نفسها.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/documentos-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">هدية 02</span>
+<h3>وثائق نفسية قابلة للتعديل</h3>
+<p>نماذج مع تعليمات خطوة بخطوة: إفادة، وتقرير نفسي، وتقرير متابعة التطور، ورأي مهني، ونموذج إحالة. قابلة للتعديل 100%.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-stack__item--noimg ps-reveal">
+<div>
+<span class="ps-stack__label--bonus">هدية 03</span>
+<h3>تحديثات دورية</h3>
+<p>تُنشر مواد جديدة ومراجعات للمحتوى بشكل دوري، دون أي تكلفة إضافية لمن لديه وصول بالفعل.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section ps-offer" id="ps-oferta">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="text-align:center">
+<span class="ps-eyebrow ps-eyebrow--light">وصول كامل</span>
+<h2>احصل على الأطلس العلاجي المرئي كاملًا</h2>
+</div>
+<figure class="ps-reveal" style="margin:0 auto 28px;max-width:640px"><img alt="الأطلس العلاجي المرئي" decoding="async" height="900" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mockup-geral-es.jpg" width="1200"/></figure>
+<ul class="ps-offer__list ps-offer__list--center ps-reveal">
+<li>120 خريطة ذهنية للمشاعر (240 صفحة)</li>
+<li>32 استعارة مرئية</li>
+<li>12 لوحة مقارنة</li>
+<li>12 مخططًا لسير الجلسة</li>
+<li>فهرس البحث والمراجع العلمية</li>
+<li><b>هدية:</b> 12 خريطة لأهم المناهج العلاجية</li>
+<li><b>هدية:</b> 6 مقاييس مرئية</li>
+<li><b>هدية:</b> وثائق نفسية قابلة للتعديل</li>
+<li><b>هدية:</b> تحديثات دورية دون أي تكلفة إضافية</li>
+</ul>
+<div class="ps-pricebox ps-reveal">
+<p class="ps-price__from">بدلًا من <s>{{original_price}}</s> الآن فقط</p>
+<p class="ps-price__now">{{price}}</p>
+<p class="ps-price__cash">دفعة واحدة · بلا اشتراك شهري</p>
+<div style="display:flex;justify-content:center;width:100%;margin:0 0 14px;">
+<span style="
+    display:inline-block;text-align:center;
+    max-width:100%;box-sizing:border-box;
+    background:#EDF5EE;color:#3B6B40;
+    border:1.5px solid #A8CDA9;border-radius:40px;
+    font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',sans-serif;
+    font-size:12px;font-weight:700;
+    letter-spacing:.05em;text-transform:uppercase;
+    padding:9px 16px;line-height:1.35;">
+    دفعة واحدة ووصول مدى الحياة
+  </span>
+</div>
+<a class="ps-btn" href="/checkout">أريد الوصول الآن</a>
+<p class="ps-microcopy">دفع آمن • وصول رقمي فوري • ضمان 7 أيام</p>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap ps-guarantee ps-reveal">
+<figure class="ps-reveal" style="margin:0"><img alt="الأطلس العلاجي المرئي" decoding="async" height="400" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/selo-garantia.jpg" width="400"/></figure>
+<div>
+<h2>ضمان 7 أيام غير مشروط</h2>
+<p class="ps-lead" style="margin-top:22px">ادخل إلى المحتوى كاملًا. وإن لم يكن مناسبًا لك، اطلب استرداد أموالك خلال 7 أيام.</p>
+</div>
+</div>
+<div class="ps-wrap ps-cta-solo ps-reveal" style="margin-top:34px">
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">أريد الوصول الآن ↓</a>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-faq">
+<div class="ps-wrap">
+<div class="ps-reveal">
+<h2>الأسئلة الشائعة:</h2>
+</div>
+<div class="ps-faq" data-accordion="">
+<div class="ps-acc"><h3><button aria-controls="ps-faq-1" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-1"><span class="ps-acc__title">هل الأطلس نسخة مطبوعة؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-1" class="ps-acc__panel" id="ps-faq-1" role="region"><div class="ps-acc__inner"><p>لا. تُسلَّم المادة بصيغة رقمية (PDF). يمكنك تصفحها من الجوال أو الكمبيوتر أو الجهاز اللوحي، وطباعة الخرائط التي تريدها.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-2" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-2"><span class="ps-acc__title">هل يجب أن أكون معالجًا لأستخدمه؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-2" class="ps-acc__panel" id="ps-faq-2" role="region"><div class="ps-acc__inner"><p>لا. يستخدم المحتوى لغة تعليمية، وقد أُعدّ ليفهمه أيضًا أي شخص مهتم بمعرفة الذات.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-5" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-5"><span class="ps-acc__title">هل سأحصل على جميع الخرائط؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-5" class="ps-acc__panel" id="ps-faq-5" role="region"><div class="ps-acc__inner"><p>نعم. يشمل الوصول الخرائط الـ120 المنظّمة في 12 محورًا، إلى جانب 32 استعارة مرئية و12 لوحة مقارنة و12 مخططًا لسير الجلسة، بالإضافة إلى الهدايا.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-13" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-13"><span class="ps-acc__title">ما هي الاستعارات واللوحات والمخططات والمقاييس؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-13" class="ps-acc__panel" id="ps-faq-13" role="region"><div class="ps-acc__inner"><p>هي صيغ مكمّلة للخرائط. تُظهر الاستعارات في صفحة واحدة كيف تعمل مجموعة من الأنماط؛ وتقارن اللوحات بين حالات الموضوع الواحد جنبًا إلى جنب؛ وتنطلق المخططات من موقف معيّن وتشير إلى الخرائط التي ينبغي الرجوع إليها؛ وتعرض المقاييس مستويات وصفية، دون درجات أو تصنيف.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-7" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-7"><span class="ps-acc__title">هل تقدّم الخرائط تشخيصًا؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-7" class="ps-acc__panel" id="ps-faq-7" role="region"><div class="ps-acc__inner"><p>لا. المادة لأغراض تعليمية ولا تُغني عن التشخيص أو التقييم من قِبل مختص.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-12" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-12"><span class="ps-acc__title">هل يوجد ضمان؟</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-12" class="ps-acc__panel" id="ps-faq-12" role="region"><div class="ps-acc__inner"><p>نعم. المنتج مشمول بضمان 7 أيام.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-final">
+<div class="ps-wrap ps-final__grid">
+<div class="ps-reveal">
+<span class="ps-eyebrow">240 صفحة • 12 محورًا • مكتبة واحدة</span>
+<h2>احصل على أهم المواضيع العلاجية منظّمة بصريًا في مكان واحد.</h2>
+<p class="ps-final__verbs">راجع. استكشف. ادرس.<br/>عُد إليه كلما ظهر موضوع جديد.</p>
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">أريد الوصول الآن ↓</a>
+<p class="ps-microcopy">وصول فوري • ملفات رقمية • ضمان 7 أيام</p>
+</div>
+<figure class="ps-final__figure ps-reveal" style="margin:0">
+
+<img alt="الأطلس العلاجي المرئي" decoding="async" height="800" src="https://recursos-pdf-hub.github.io/entregas2/psios-gcc/landing-img/mockup-geral-final.jpg" width="1000"/>
+</figure>
+</div>
+</section>
+<footer style="text-align:center;padding:40px 20px 56px;font-size:13px;color:var(--muted,#6b6b6b);line-height:1.6">
+<p style="font-weight:600;margin:0 0 6px">الأطلس العلاجي المرئي</p>
+<p style="max-width:640px;margin:0 auto 12px">هذه مادة تعليمية. ولا ينبغي استخدام محتواها بديلًا عن التشخيص أو العلاج أو التقييم أو المتابعة التي يقدّمها مختص مؤهل.</p>
+<p style="margin:0">الأطلس العلاجي المرئي © 2026 — جميع الحقوق محفوظة.</p>
+</footer>
+</main></div><script>try{
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+
+  
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute("href");
+    if (id.length < 2) return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.pageYOffset - 76;
+    window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+  });
+
+  
+  document.querySelectorAll("[data-accordion]").forEach(function (group) {
+    group.querySelectorAll(".ps-acc__trigger").forEach(function (trigger) {
+      var panel = document.getElementById(trigger.getAttribute("aria-controls"));
+      trigger.addEventListener("click", function () {
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          panel.style.height = panel.scrollHeight + "px";
+          requestAnimationFrame(function () { panel.style.height = "0px"; });
+          trigger.setAttribute("aria-expanded", "false");
+        } else {
+          trigger.setAttribute("aria-expanded", "true");
+          panel.style.height = panel.scrollHeight + "px";
+          window.setTimeout(function () {
+            if (trigger.getAttribute("aria-expanded") === "true") panel.style.height = "auto";
+          }, 360);
+        }
+      });
+    });
+  });
+
+  
+  var marquee = document.getElementById("ps-marquee");
+  var track = document.getElementById("ps-gallery");
+  if (marquee && track && track.firstElementChild) {
+    // 1. agrupa os itens originais
+    var group = document.createElement("div");
+    group.className = "ps-gallery__group";
+    while (track.firstElementChild) group.appendChild(track.firstElementChild);
+    track.appendChild(group);
+
+    // 2. imagens deixam de ser lazy: a largura não pode mudar depois
+    track.querySelectorAll("img").forEach(function (img) {
+      img.loading = "eager";
+      img.removeAttribute("loading");
+    });
+
+    var groupWidth = 0;
+    var x = 0;
+    var speed = 42;   // pixels por segundo
+    var last = null;
+    var paused = false;
+
+    // 3. clona grupos até o trilho cobrir pelo menos 3x a largura da tela.
+    //    com folga assim, nunca existe borda visível durante o reposicionamento.
+    function build() {
+      groupWidth = group.getBoundingClientRect().width;
+      if (!groupWidth) return;
+      var alvo = window.innerWidth * 3 + groupWidth;
+      var atual = track.getBoundingClientRect().width;
+      var guarda = 0;
+      while (atual < alvo && guarda < 12) {
+        var c = group.cloneNode(true);
+        c.setAttribute("aria-hidden", "true");
+        track.appendChild(c);
+        atual += groupWidth;
+        guarda++;
+      }
+    }
+
+    function measure() {
+      var novo = group.getBoundingClientRect().width;
+      if (novo && Math.abs(novo - groupWidth) > 1) {
+        groupWidth = novo;
+        x = 0;
+      }
+    }
+
+    build();
+    window.addEventListener("resize", function () { measure(); build(); });
+    window.addEventListener("orientationchange", function () { measure(); build(); });
+    window.addEventListener("load", function () { measure(); build(); });
+    track.querySelectorAll("img").forEach(function (img) {
+      if (!img.complete) img.addEventListener("load", function () { measure(); build(); });
+    });
+
+    // 4. loop em pixels
+    function frame(now) {
+      if (last === null) last = now;
+      var dt = (now - last) / 1000;
+      last = now;
+      if (dt > 0.25) dt = 0;
+      if (!paused && groupWidth > 0) {
+        x -= speed * dt;
+        while (x <= -groupWidth) x += groupWidth;
+        track.style.transform = "translate3d(" + x + "px,0,0)";
+      }
+      requestAnimationFrame(frame);
+    }
+    if (!reduceMotion) requestAnimationFrame(frame);
+
+    marquee.addEventListener("click", function () { paused = !paused; });
+    marquee.addEventListener("touchstart", function () { paused = true; }, { passive: true });
+    marquee.addEventListener("touchend", function () { paused = false; }, { passive: true });
+    marquee.addEventListener("mouseenter", function () { paused = true; });
+    marquee.addEventListener("mouseleave", function () { paused = false; });
+    document.addEventListener("visibilitychange", function () { last = null; });
+  }
+
+  
+  var revealables = document.querySelectorAll(".ps-reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealables.forEach(function (el) { el.classList.add("ps-is-visible"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ps-is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealables.forEach(function (el) { io.observe(el); });
+  }
+})();
+
+(function(){function chk(){var vh=window.innerHeight||800;document.querySelectorAll('.ps-reveal:not(.ps-is-visible)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*1.15&&r.bottom>-vh*0.5){el.classList.add('ps-is-visible');}});}window.addEventListener('scroll',chk,{passive:true});window.addEventListener('resize',chk);window.addEventListener('load',function(){chk();setTimeout(chk,600);setTimeout(chk,2000);});document.addEventListener('DOMContentLoaded',chk);})();
+
+setTimeout(function(){document.querySelectorAll('.ps-reveal').forEach(function(e){e.classList.add('ps-is-visible')})},2500);
+}catch(e){document.querySelectorAll(".ps-reveal").forEach(function(x){x.classList.add("ps-is-visible")})}</script></div>
